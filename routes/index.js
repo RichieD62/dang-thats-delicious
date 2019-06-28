@@ -3,7 +3,26 @@ const router = express.Router();
 
 // Do work here
 router.get('/', (req, res) => {
-  res.send('Hey! It works!');
+  // var richie = {
+  //   name: "Richie",
+  //   age: 24,
+  //   dog: "Joey",
+  //   game: "Pathfinder"
+  // };
+
+  // // res.send('Hey! It works!');
+  // res.json(richie);
+
+  res.render('hello', {
+    name: "Richie",
+    dog: "Joey",
+    age: 24
+  })
 });
+
+router.get('/reverse/:name', (req, res) => {
+  var reverse = [...req.params.name].reverse().join('');
+  res.send(reverse)
+})
 
 module.exports = router;
