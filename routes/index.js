@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
     name: "Richie",
     dog: "Joey",
     age: 24,
-    funFact: req.query.fact 
+    title: "I love food!"
   })
 });
 
