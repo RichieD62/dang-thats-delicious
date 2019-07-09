@@ -47,7 +47,12 @@ html
                   p.flash__text!= message
                   button.flash__remove(onClick="this.parentElement.remove()") &times;
     .content
-      block content
+      block content 
+        p this is the default
+
+    footer
+      block footer
+        p (C) Richard Donovan
 
     block scripts
       script(src=`https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_KEY}&libraries=places`)

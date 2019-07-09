@@ -16,7 +16,8 @@ router.get('/', (req, res) => {
   res.render('hello', {
     name: "Richie",
     dog: "Joey",
-    age: 24
+    age: 24,
+    funFact: req.query.fact 
   })
 });
 
